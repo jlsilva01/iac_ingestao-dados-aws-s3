@@ -1,2 +1,3 @@
 *.csv
 terraform-provider-aws_*.exe
+MICRODADOS_ENADE_2017.*
