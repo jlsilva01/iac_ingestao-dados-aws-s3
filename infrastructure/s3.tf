@@ -21,6 +21,12 @@ resource "aws_s3_object" "raw-zone" {
     key    = "raw-zone/"
 }
 
+resource "aws_s3_object" "staging-zone" {
+    bucket = "${var.base_bucket_name}-${var.environment}-${var.account_number}"
+    acl    = "private"
+    key    = "staging-zone/"
+}
+
 resource "aws_s3_object" "consumer-zone" {
     bucket = "${var.base_bucket_name}-${var.environment}-${var.account_number}"
     acl    = "private"
